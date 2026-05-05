@@ -392,7 +392,7 @@ jobs:
           echo "status=success" >> ${GITHUB_OUTPUT}
 
       - name: Rebuild Armbian for target boards
-        uses: .
+        uses: ./
         if: ${{ env.ARMBIAN_URL != '' && !cancelled() }}
         with:
           build_target: armbian

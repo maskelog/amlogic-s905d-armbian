@@ -416,7 +416,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Rebuild Armbian for target boards
-        uses: .
+        uses: ./
         if: ${{ steps.clean.outputs.status == 'success' && !cancelled() }}
         with:
           build_target: armbian
