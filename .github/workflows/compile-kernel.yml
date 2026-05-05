@@ -83,6 +83,9 @@ on:
           - -ophub
           - -yourname
 
+permissions:
+  contents: write
+
 env:
   TZ: Etc/UTC
 

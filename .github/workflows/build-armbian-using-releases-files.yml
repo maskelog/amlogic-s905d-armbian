@@ -300,6 +300,9 @@ on:
           - ophub
           - angel
 
+permissions:
+  contents: write
+
 env:
   TZ: Etc/UTC
 

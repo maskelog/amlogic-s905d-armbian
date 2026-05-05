@@ -29,6 +29,9 @@ on:
         options:
           - ophub/armbian
 
+permissions:
+  contents: write
+
 env:
   TZ: Etc/UTC
   MAKE_DOCKER_SH: compile-kernel/tools/script/docker/build_armbian_docker_image.sh
@@ -142,4 +145,3 @@ jobs:
           docker push "${{ inputs.docker_img }}-${{ inputs.source_branch }}:latest"
 
           echo "status=success" >> ${GITHUB_OUTPUT}
-

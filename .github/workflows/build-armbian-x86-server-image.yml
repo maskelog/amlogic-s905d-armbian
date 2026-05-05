@@ -28,6 +28,9 @@ on:
           - ophub/armbian
           - none
 
+permissions:
+  contents: write
+
 env:
   TZ: Etc/UTC
   ROOTFS_SCRIPT: compile-kernel/tools/script/docker/build_armbian_rootfs_file.sh
